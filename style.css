@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('bg\ wb.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 100%;
+}
+
+header {
+    background-color: transparent;
+    height: 100px;
+    margin-top: 44px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.baritems {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.logo img {
+    height: 150px;
+    margin-bottom: 100px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.search-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.search-container input[type="text"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 70%;
+    margin-right: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.search-container button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.search-container button:hover {
+    background-color: #45a049;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
+}
+
+.specials {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.food-image {
+    margin-top: 20px;
+}
+
+.food-image img {
+    max-width: 300px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    padding-top: 60px;
+    animation: modalFadeIn 0.5s ease;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    max-width: 80%;
+    animation: modalSlideIn 0.5s ease;
+}
+
+@keyframes modalSlideIn {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#searchResults {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.grid-item {
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    background-color: #fff;
+}
+
+.grid-item:hover {
+    transform: translateY(-5px);
+}
+
+.grid-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.grid-item p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #666;
+}
+
+.grid-item h3 {
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: #ff6600;
+}
+
+.random-meal-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    overflow: hidden;
+}
+
+.specials-heading {
+    font-family: 'Luckiest Guy', cursive;
+    text-decoration: underline;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    color: #ff0000;
+    font-size: 36px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-right: 200px;
+}
+
+.page-heading {
+    text-align: center;
+    font-size: 70px;
+    color: transparent;
+    background-image: linear-gradient(to right, #ff7f00, #ffffff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-family: 'Kaushan Script', cursive;
+}
+
+.search-results-heading {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-top: 20px;
+    font-family: 'Kanit', sans-serif;
+    color: #00FF00;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #000000;
+}
+
+#randomMealImage {
+    max-width: 500px;
+    max-height: 500px;
+    width: auto;
+    height: auto;
+    border: 8px solid #ff6600;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+#randomMealImage:hover {
+    transform: scale(1.05);
+}
+
+.logo h1 {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 48px;
+    background: linear-gradient(to bottom, #FF4500 50%, #FF0000 50%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.random-meal-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FF5733;
+    text-align: center;
+    margin-top: 10px;
+    text-decoration: underline;
+    text-decoration-color: #FF5733;
+    -webkit-text-stroke: 1px #FF5733;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #095bff;
+    position: absolute;
+    top: 464px;
+    left: 140px;
+}
+
+#recipeVideoButton {
+    background-color: #FF5733;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    animation: pulse 2s infinite alternate;
+    position: absolute;
+    left: 948px;
+    top: 393px;
+}
+
+#recipeVideoButton:hover {
+    background-color: #FF8C66;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    header {
+        height: 80px;
+        margin-top: 20px;
+        padding: 10px;
+    }
+
+    .logo img {
+        height: 80px;
+    }
+
+    nav ul li {
+        margin-left: 10px;
+    }
+
+    .search-container input[type="text"] {
+        width: 60%;
+    }
+
+    .search-container button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .grid-item {
+        padding: 10px;
+    }
+
+    .random-meal-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .random-meal-name {
+        position: static;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    #recipeVideoButton {
+        position: static;
+        margin-top: 20px;
+        left: auto;
+    }
+
+    .specials-heading {
+        font-size: 24px;
+        margin-right: 0;
+        text-align: center;
+        position: absolute;
+        top: 560px;
+        right: 66px;
+    }
+
+    .modal-content {
+        margin: 20% auto;
+        padding: 10px;
+    }
+
+    .close {
+        font-size: 24px;
+    }
+}
+
+#Description {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    color: #FF5733;
+    font-weight: bold;
+    margin-top: 10px;
+    font-style: italic;
+    animation: lightning 2s linear infinite alternate;
+    position: absolute;
+    bottom: 320px;
+    left: 255px;
+}
+
+@keyframes lightning {
+    0% {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff7f00, 0 0 70px #ff7f00, 0 0 80px #ff7f00, 0 0 100px #ff7f00, 0 0 150px #ff7f00;
+    }
+    100% {
+        text-shadow: 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 50px #ff7f00, 0 0 80px #ff7f00, 0 0 90px #ff7f00, 0 0 110px #ff7f00, 0 0 200px #ff7f00;
+    }
+}
