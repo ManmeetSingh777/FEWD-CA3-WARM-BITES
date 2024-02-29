@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap'); */
 
 body {
     margin: 0;
@@ -10,6 +10,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 100%;
+    scroll-behavior: smooth;
 }
 
 header {
@@ -71,7 +72,7 @@ nav ul li a {
     color: white;
     cursor: pointer;
     font-size: 16px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.1s ease;
 }
 
 .search-container button:hover {
@@ -145,7 +146,7 @@ nav ul li a {
     float: right;
     font-size: 28px;
     font-weight: bold;
-    transition: color 0.3s ease;
+    transition: color 0.1s ease;
 }
 
 .close:hover,
@@ -166,7 +167,7 @@ nav ul li a {
     border-radius: 10px;
     padding: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    transition: transform 0.1s ease;
     background-color: #fff;
 }
 
@@ -247,7 +248,7 @@ nav ul li a {
 }
 
 #randomMealImage:hover {
-    transform: scale(1.05);
+    transform: scale(1);
 }
 
 .logo h1 {
@@ -268,8 +269,8 @@ nav ul li a {
     text-decoration: underline;
     text-decoration-color: #FF5733;
     -webkit-text-stroke: 1px #FF5733;
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: #095bff;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #ffffff;
     position: absolute;
     top: 464px;
     left: 140px;
@@ -338,7 +339,7 @@ nav ul li a {
 
     .random-meal-name {
         position: static;
-        margin-top: 20px;
+        margin-bottom: 50px;
         text-align: center;
     }
 
@@ -370,13 +371,12 @@ nav ul li a {
 #Description {
     font-family: Arial, sans-serif;
     font-size: 20px;
-    color: #FF5733;
+    text-align: center;
+    color: #ffffff;
+    line-height: 30px;
+    height: 78%;
     font-weight: bold;
-    margin-top: 10px;
     font-style: italic;
-    animation: lightning 2s linear infinite alternate;
-    position: absolute;
-    bottom: 320px;
     left: 255px;
 }
 
